@@ -1,0 +1,10 @@
+
+<p>Assignment-2 : DataBinding</p>
+<label>Username:</label>
+<input type="text"
+class="form-control"
+[(ngModel)]="updateUsername">
+<p>The username Entered is {{ updateUsername }}</p> 
+<button class="btn btn-primary" 
+[disabled]="!updateUsername"
+(click)="onClick()">Reset User</button>
