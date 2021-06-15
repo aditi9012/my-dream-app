@@ -1,4 +1,8 @@
 <div class="color">
 <app-server></app-server>
-<app-server></app-server>
+<button class="btn btn-primary" [disabled]="!allowNewServer" (click)="onCreateMyNewServer()">Add new server</button>
+<p>{{ createNewServer }}</p>
+<p>{{ allowNewServer }}</p><!--string interpolation-->
+<p [innerText]="allowNewServer"></p><!--property binding-->
+
 </div>
