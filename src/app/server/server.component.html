@@ -1,2 +1,14 @@
 <h4>Hi this is the server component</h4>
 <p>{{'server'}} with serverid {{ serverId}} is {{ serverStatus}}</p>
+<label>Testing Events</label>
+<input type="text"            
+class="form-control"
+(input)="onUpdateServerName($event)">        <!--example of event binding-->
+<p>{{ eventValue }}</p>
+
+<hr>
+
+<input type="text"            
+class="form-control"
+[(ngModel)]="eventValueTwoWayBind">        <!--example of two way binding-->
+<p>{{ eventValueTwoWayBind }}</p>
