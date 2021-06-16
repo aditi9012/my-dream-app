@@ -1,0 +1,16 @@
+<div class="center"><p>directives works!</p>
+ 
+    <li>Add a button which says Display Details</li>
+    <li>Add a paragraph with any content of your choice (e.g. 'secret password=tuna')
+    </li>
+    <li>Toggle the Displaying of that paragraph with the button created in the first paragraph  </li>
+    <li>Log all the button clicks in an array and output that array below the secret paragraph (maybe log a timestamp or simply an incrementing number)</li>
+    <li>Starting at the 5th log item,give all future log items a blue background (via ngStyle) and White color (vis ngClass)</li>
+
+<hr>
+<button class="btn btn-primary" (click)="onToggle()">Display Details</button><!--toggling condition-->
+<p *ngIf="showSecret">secret password=tuna</p>
+<div *ngFor="let logs of log; let i = index" [ngStyle]="{backgroundColor:i>=5?'purple':'green'}" [ngClass]="{text:i>=5}">
+    {{logs}}
+</div>
+</div>

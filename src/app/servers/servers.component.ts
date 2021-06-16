@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-
+import { FormsModule } from '@angular/forms';
 @Component({
   selector: 'app-servers',
   templateUrl: './servers.component.html',
@@ -8,6 +8,8 @@ import { Component, OnInit } from '@angular/core';
 export class ServersComponent implements OnInit {
    allowNewServer=false;
    createNewServer='no server was created!';
+   serverName='serverName';
+   serverCreated=false;
   constructor() { 
     setTimeout(()=>{
       this.allowNewServer=true;
@@ -17,7 +19,9 @@ export class ServersComponent implements OnInit {
   ngOnInit(): void {
   }
    onCreateMyNewServer(){
-     this.createNewServer='new server is created!';
+    //  this.createNewServer='new server is created!';
+     this.serverCreated=true;
+
    }
  
 }
